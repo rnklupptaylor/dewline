@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.jpg binary
+*.png binary
+
+# Keep the original Netlify bytes for the migration baseline.
+src/index.html -text
+src/compact.css -text

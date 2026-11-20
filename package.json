@@ -1,0 +1,13 @@
+{
+  "name": "dewline",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node tools/build.cjs",
+    "test": "node tests/validate.cjs && node tests/validate-geometry.cjs && node tests/validate-ripples.cjs"
+  }
+}

@@ -1,0 +1,110 @@
+/* On phones the device stays visible; tabs change the lower workspace without scrolling. */
+.mobile-tabs,.mobile-pore-selector,.chart-threshold,.model-pages{display:none}
+@media(max-width:900px){
+ html,body{position:fixed;inset:0;width:100%;height:100%;min-height:0;overflow:hidden;overscroll-behavior:none}
+ .workspace{height:100vh;height:100dvh;min-height:0;grid-template-rows:calc(44px + env(safe-area-inset-top)) minmax(0,1fr) 48px calc(30px + env(safe-area-inset-bottom));gap:6px;padding:0 max(8px,env(safe-area-inset-right)) 0 max(8px,env(safe-area-inset-left));overflow:hidden}
+ header{gap:10px;min-width:0;padding-top:env(safe-area-inset-top)}
+ .brand{font-size:20px;gap:6px}.brand svg{width:20px;height:23px}.brand>span{margin-left:-6px}
+ .header-title,.live{display:none}footer{display:flex;min-height:0;padding:0 2px calc(2px + env(safe-area-inset-bottom));border:0}.credits{font-size:7.5px;line-height:1.35}.header-actions{gap:5px}.header-actions .button{padding:7px 9px;min-height:30px;font-size:9px}
+ #fullscreen{font-size:0;min-width:30px;padding:6px}#fullscreen:before{content:'⛶';font-size:17px}
+ main{min-width:0;min-height:0;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(140px,1fr) minmax(282px,1.1fr);gap:8px}
+ .viewport{grid-column:1;grid-row:1;min-width:0;min-height:0;border-radius:9px}
+ .view-header{left:12px;right:10px;top:10px;gap:6px;align-items:start}.view-header h1{font-size:15px;line-height:1.25;margin-top:4px;max-width:150px}.view-header .eyebrow{font-size:6px;letter-spacing:1px}
+ .view-tools{max-width:none;display:grid;grid-template-columns:repeat(2,auto);gap:4px}.view-tools .button{font-size:8px;min-height:25px;padding:5px 7px}
+ .view-state{top:69px;left:12px;gap:10px}.filled-count{font-size:8px;padding:4px 7px}.legend{font-size:7px}
+ .view-bottom{height:36px;padding:0 12px}.interaction-hint{display:none}.zoom-control{width:100%;gap:12px;font-size:9px}.zoom-control input{width:auto;flex:1;min-width:0}.zoom-control output{font-size:8px}
+ 
+ #annotations text{font-size:8px;stroke-width:3px}
+ .sidebar{grid-column:1;grid-row:2;min-height:0;padding:10px 12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:18px minmax(55px,1fr) minmax(55px,1fr) 65px 36px;gap:7px 14px;overflow:hidden}
+ .side-heading{grid-column:1/-1;grid-row:1;margin:0}.side-heading h2{font-size:12px}.small-tag{font-size:6px;padding:3px 5px}
+ .sidebar .control{margin:0;min-width:0;align-self:center}.sidebar .control:nth-child(2){grid-column:1;grid-row:2}.sidebar .control:nth-child(3){grid-column:2;grid-row:2}.sidebar .control:nth-child(4){grid-column:1;grid-row:3}
+ .control label{font-size:9px;line-height:1.2;gap:6px}.control output{flex-shrink:0;font-size:19px;letter-spacing:-.5px}.control output small{font-size:8px}
+ input[type=range]{height:26px;background-size:100% 3px;background-repeat:no-repeat;background-position:center;margin:3px 0 0;touch-action:pan-x}
+ input[type=range]::-webkit-slider-thumb{width:19px;height:19px}input[type=range]::-moz-range-thumb{width:13px;height:13px}
+ .range-labels{display:none}
+ .selection{grid-column:2;grid-row:3;display:flex;flex-direction:column;align-self:center;min-width:0;border:0;padding:0;margin:0}
+ .selection-title,.array-buttons{display:none}.selected-size{display:flex;align-items:center;gap:6px;margin:0;min-width:0}.selected-size>span{font-size:9px;line-height:1.2;color:#a0b6c2}.selected-size strong{flex-shrink:0;font-size:19px;letter-spacing:-.5px}.selected-size small{font-size:8px}
+ .mobile-array-control[type=range]{display:block}
+ .threshold{grid-column:1;grid-row:4;align-self:stretch;min-width:0;margin:0;padding:8px 10px;border-radius:7px}.threshold-top{font-size:7px;gap:5px}.threshold>strong{font-size:26px;margin-top:4px}.threshold>strong small{font-size:8px}.threshold>div:last-child{display:none}.badge{font-size:6px}
+ .metrics{grid-column:2;grid-row:4;align-self:center;padding:0;gap:6px;min-width:0}.metrics>div{font-size:7.5px;gap:4px;min-width:0}.metrics span{min-width:0}.metrics strong{font-size:9px;white-space:nowrap}
+ .primary-button{grid-column:1/-1;grid-row:5;align-self:stretch;margin:0;padding:9px 12px;font-size:11px;min-height:0}.side-foot{display:none}
+ .bottom-row{display:none;grid-column:1;grid-row:2;min-width:0;min-height:0;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:0}
+ .chart-panel,.presets{height:100%;min-height:0;overflow:hidden;padding:15px 14px}.chart-panel .compact-heading h2,.presets .compact-heading h2{font-size:13px}.chart-legend{font-size:8px;gap:10px}.chart-legend span:first-child{display:flex}.chart-panel .text-button{font-size:10px;padding:8px 0 8px 7px}
+ #responseChart{margin-top:7px;overflow:hidden}
+ .presets .compact-heading>span{font-size:8px}.preset-buttons{gap:8px;margin-top:12px;grid-auto-rows:minmax(0,1fr)}.preset{gap:12px;padding:9px 12px;min-height:0}.preset strong{font-size:13px}.preset small{font-size:9px;margin-top:4px}.preset-letter{font-size:19px}.presets>p{font-size:9px;line-height:1.5;min-height:27px;margin-top:10px}
+ .workspace[data-mobile-view=controls] .sidebar{display:grid}.workspace:not([data-mobile-view=controls]) .sidebar{display:none}
+ .workspace[data-mobile-view=response] .bottom-row,.workspace[data-mobile-view=presets] .bottom-row{display:grid}
+ .workspace[data-mobile-view=response] .presets,.workspace[data-mobile-view=presets] .chart-panel{display:none}
+ .mobile-tabs{display:flex;gap:5px;align-items:stretch;padding:3px 0;border-top:1px solid #22313d;min-height:0}
+ .mobile-tabs button{flex:1;min-width:0;border:1px solid transparent;border-radius:6px;background:transparent;color:#7e9cae;font-size:11px;letter-spacing:.2px;min-height:38px;padding:7px 10px}
+ .mobile-tabs button[aria-selected=true]{background:#16332f;border-color:#31574d;color:#b7eddf}
+ .model-note{position:fixed;inset:calc(8px + env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));width:auto;max-width:none;height:auto;max-height:none;overflow:hidden;padding:18px;z-index:20}
+ .model-note>strong{display:block;font-size:15px;padding-right:36px}.model-note>button{position:absolute;right:12px;top:9px;width:34px;height:34px;float:none;font-size:25px}
+ .animation-option{margin-top:15px;gap:9px;font-size:11px;min-height:28px;line-height:1.5}.animation-option input{width:17px;height:17px;flex-shrink:0}
+ .model-pages{display:flex;gap:7px;margin-top:18px}.model-pages button{min-height:36px;padding:8px 12px;font-size:11px}
+ .model-note[data-page=equation] .model-assumptions,.model-note[data-page=assumptions] .model-equation{display:none}
+ .model-note p{font-size:11px;line-height:1.7;margin-top:15px}.formula{font-size:20px;margin-top:25px}
+}
+@media(max-width:900px) and (min-height:740px){
+ .sidebar{padding:12px 14px;grid-template-rows:20px minmax(60px,1fr) minmax(60px,1fr) 72px 44px;gap:9px 16px}
+ .control output,.selected-size strong{font-size:22px}.control label,.selected-size>span{font-size:10px}.sidebar input[type=range]{height:32px}.threshold>strong{font-size:30px}.threshold-top{font-size:8px}.metrics>div{font-size:8px}.metrics strong{font-size:10px}
+}
+@media(max-width:900px) and (max-height:600px) and (orientation:portrait){
+ .view-header{top:6px;display:block}.view-header>div:first-child{display:none}.view-header .view-tools{width:100%;max-width:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px}.view-tools .button{font-size:7px;min-height:22px;padding:4px 6px}.view-state{display:none}
+ .model-note{padding:14px}.model-note p{font-size:10px;line-height:1.55;margin-top:12px}.animation-option{font-size:10px;margin-top:10px;min-height:25px}.model-pages{margin-top:12px}.formula{margin-top:16px;font-size:18px}
+}
+@media(max-width:900px) and (orientation:landscape){
+ main{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:8px}
+ .viewport{grid-column:1;grid-row:1}.sidebar,.bottom-row{grid-column:2;grid-row:1}
+ .sidebar{padding:8px 10px;grid-template-rows:15px minmax(40px,1fr) minmax(40px,1fr) 48px 30px;gap:4px 12px}
+ .side-heading h2{font-size:10px}.control label,.selected-size>span{font-size:8px}.control output,.selected-size strong{font-size:17px}.sidebar input[type=range]{height:21px;margin-top:1px}.threshold{padding:5px 8px}.threshold-top{font-size:6px}.threshold>strong{font-size:22px;margin-top:2px}.metrics{gap:3px}.metrics>div{font-size:7px}.metrics strong{font-size:8px}.primary-button{padding:7px 10px;font-size:10px}
+ .view-header{top:9px;left:10px;right:9px}.view-header h1{font-size:12px;max-width:110px}.view-tools .button{font-size:7px;padding:4px 5px;min-height:24px}.view-state{top:65px;left:10px}.legend{display:none}.view-bottom{height:31px;padding:0 10px}
+ .chart-panel,.presets{padding:10px 12px}.compact-heading h2,.chart-panel .compact-heading h2,.presets .compact-heading h2{font-size:11px}.chart-legend{font-size:7px;gap:7px}.preset-buttons{gap:5px;margin-top:7px}.preset{padding:5px 9px}.preset strong{font-size:10px}.preset small{font-size:7px;margin-top:2px}.preset-letter{font-size:15px}.presets>p{font-size:8px;min-height:22px;margin-top:6px}
+ .model-note{display:grid;grid-template-columns:1fr 1.5fr;grid-template-rows:25px 39px 39px minmax(0,1fr);gap:7px 20px;padding:15px}
+ .model-note>strong{grid-column:1;grid-row:1;font-size:13px}.animation-option{font-size:10px;margin:0;min-height:0}.model-note>.animation-option:nth-of-type(1){grid-column:1;grid-row:2}.model-note>.animation-option:nth-of-type(2){grid-column:1;grid-row:3}.model-pages{grid-column:1;grid-row:4;align-self:start;margin-top:6px}.model-pages button{font-size:10px;padding:7px 10px;min-height:32px}
+ .model-equation,.model-assumptions{grid-column:2;grid-row:1/5;padding-right:25px}.model-note p{font-size:10px;line-height:1.6;margin-top:10px}.formula{font-size:18px;margin-top:8px}
+}
+/* Keep the live curve with the controls, including on small phone screens. */
+@media(max-width:900px){
+ .mobile-pore-selector{display:block;min-width:0;width:100%}
+ .mobile-pore-selector label{display:flex;justify-content:space-between;align-items:center;color:#b3c5ce;font-size:10px;line-height:1.2;margin-bottom:4px}
+ .mobile-pore-selector label span{font-size:8px;color:#7793a3}
+ .mobile-pore-selector select{display:block;width:100%;min-width:0;height:34px;padding:3px 7px;border:1px solid #365b59;border-radius:6px;background:#132622;color:#b7eddf;font:500 16px 'Segoe UI',sans-serif;color-scheme:dark;cursor:pointer}
+ .selection .selected-size{display:none}
+ .chart-threshold{display:block;color:#a4d8cb;font-size:9px;line-height:1.2;margin-top:5px;flex-shrink:0}
+ .workspace[data-mobile-view=controls] main{grid-template-rows:minmax(130px,1fr) 190px minmax(112px,.7fr)}
+ .workspace[data-mobile-view=controls] .sidebar{padding:8px 12px;grid-template-rows:16px minmax(49px,1fr) minmax(49px,1fr) 32px;gap:5px 14px}
+ .workspace[data-mobile-view=controls] .side-heading h2{font-size:11px}
+ .workspace[data-mobile-view=controls] .control output{font-size:19px}
+ .workspace[data-mobile-view=controls] .control label{font-size:9px}
+ .workspace[data-mobile-view=controls] .sidebar input[type=range]{height:26px;margin-top:2px}
+ .workspace[data-mobile-view=controls] .threshold,.workspace[data-mobile-view=controls] .metrics{display:none}
+ .workspace[data-mobile-view=controls] .primary-button{grid-row:4;padding:7px 12px;font-size:10px}
+ .workspace[data-mobile-view=controls] .bottom-row{display:grid;grid-row:3;grid-column:1;grid-template-rows:minmax(0,1fr)}
+ .workspace[data-mobile-view=controls] .presets{display:none}
+ .workspace[data-mobile-view=controls] .chart-panel{padding:8px 12px 5px}
+ .workspace[data-mobile-view=controls] .chart-panel .compact-heading h2{font-size:11px}
+ .workspace[data-mobile-view=controls] .chart-panel .text-button{padding:1px 0 1px 5px;font-size:9px}
+ .workspace[data-mobile-view=controls] .chart-legend{font-size:7px;gap:7px}
+ .workspace[data-mobile-view=controls] #responseChart{margin-top:3px}
+}
+@media(max-width:900px) and (orientation:landscape){
+ .workspace{grid-template-rows:calc(44px + env(safe-area-inset-top)) minmax(0,1fr) 48px calc(22px + env(safe-area-inset-bottom))}
+ .workspace[data-mobile-view=controls] main{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);grid-template-rows:149px minmax(85px,1fr)}
+ .workspace[data-mobile-view=controls] .viewport{grid-row:1/3;grid-column:1}
+ .workspace[data-mobile-view=controls] .sidebar{grid-column:2;grid-row:1;padding:6px 10px;grid-template-rows:13px 40px 40px 26px;gap:4px 12px}
+ .workspace[data-mobile-view=controls] .side-heading h2{font-size:9px}
+ .workspace[data-mobile-view=controls] .control label{font-size:8px}
+ .workspace[data-mobile-view=controls] .control output{font-size:16px}
+ .workspace[data-mobile-view=controls] .sidebar input[type=range]{height:20px;margin-top:0}
+ .workspace[data-mobile-view=controls] .primary-button{padding:4px 10px;font-size:9px}
+ .workspace[data-mobile-view=controls] .bottom-row{grid-column:2;grid-row:2}
+ .mobile-pore-selector label{font-size:9px;margin-bottom:2px}.mobile-pore-selector select{height:27px;font-size:16px;padding:1px 5px}
+ .workspace[data-mobile-view=controls] .chart-panel{padding:5px 9px 3px}
+ .workspace[data-mobile-view=controls] .chart-panel .compact-heading h2{font-size:9px}
+ .workspace[data-mobile-view=controls] .chart-legend{font-size:6px;gap:5px}
+ .workspace[data-mobile-view=controls] .chart-threshold{font-size:8px;margin-top:2px}
+}
+@media(max-width:900px) and (max-height:650px) and (orientation:portrait){
+ .workspace[data-mobile-view=controls] main{grid-template-rows:minmax(130px,1fr) 180px minmax(102px,.7fr)}
+}
